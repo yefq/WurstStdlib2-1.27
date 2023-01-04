@@ -498,3 +498,4 @@ function vectorTests()
 	test1.toVec3().isInPolygon2d(points[0].toVec3(), points[1].toVec3(), points[2].toVec3(), points[3].toVec3()).assertTrue()
 	test2.toVec3().isInPolygon2d(points[0].toVec3(), points[1].toVec3(), points[2].toVec3(), points[3].toVec3()).assertFalse()
 	test3.toVec3().isInPolygon2d(points[0].toVec3(), points[1].toVec3(), points[2].toVec3()).assertTrue()
+

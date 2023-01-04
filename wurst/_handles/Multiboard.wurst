@@ -46,7 +46,7 @@ public function multiboard.getColumnCount() returns int
 	return MultiboardGetColumnCount(this)
 
 public function multiboard.getItem(int row, int column) returns multiboarditem
-	return MultiboardGetItem(this, row, column)
+	return MultiboardGetItem(this,row,column)
 
 public function multiboard.getRowCount() returns int
 	return MultiboardGetRowCount(this)

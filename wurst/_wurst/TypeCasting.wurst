@@ -98,6 +98,20 @@ public function triggerFromIndex(int index) returns trigger
 public function triggerToIndex(trigger object) returns int
 	return object.getHandleId()
 
+public function triggeractionFromIndex(int index) returns triggeraction
+	typecastdata.saveFogState(0,ConvertFogState(index))
+	return typecastdata.loadTriggerAction(0)
+
+public function triggeractionToIndex(triggeraction object) returns int
+	return object.getHandleId()
+
+public function triggerconditionFromIndex(int index) returns triggercondition
+	typecastdata.saveFogState(0,ConvertFogState(index))
+	return typecastdata.loadTriggerCondition(0)
+
+public function triggerconditionToIndex(triggercondition object) returns int
+	return object.getHandleId()
+
 public function timerFromIndex(int index) returns timer
 	typecastdata.saveFogState(0,ConvertFogState(index))
 	return typecastdata.loadTimer(0)
@@ -196,20 +210,13 @@ public function lightningToIndex(lightning object) returns int
 	typecastdata.saveLightning(-object.getHandleId(), object)
 	return -object.getHandleId()
 
-public function imageFromIndex(int index) returns image
-	typecastdata.saveFogState(0,ConvertFogState(index))
-	return typecastdata.loadImage(0)
-
-public function imageToIndex(image object) returns int
-	return object.getHandleId()
-
 public function ubersplatFromIndex(int index) returns ubersplat
 	typecastdata.saveFogState(0,ConvertFogState(index))
 	return typecastdata.loadUbersplat(0)
 
 public function ubersplatToIndex(ubersplat object) returns int
 	return object.getHandleId()
-	
+
 public function booleanToIndex(boolean u) returns int
 	return u ? 1 : 0
 

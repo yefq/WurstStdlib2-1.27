@@ -188,3 +188,4 @@ public class Fx
 	function hiddenDestroy()
 		dummy.setPos(2147483647, 2147483647)
 		destroy this
+

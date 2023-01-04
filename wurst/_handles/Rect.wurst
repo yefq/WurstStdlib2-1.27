@@ -88,3 +88,4 @@ function rectTest()
 
 	rekt.getCenterX().assertEquals(2)
 	rekt.getCenterY().assertEquals(2)
+

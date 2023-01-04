@@ -216,3 +216,4 @@ public class DynamicSound
 		setAbsolutePitch(1)
 		soundData.snd.stop(false, false)
 		setAbsolutePitch(1)
+

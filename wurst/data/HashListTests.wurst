@@ -203,3 +203,4 @@ function testIteratorRemove()
 	list.get(1).assertEquals(1)
 	list.get(2).assertEquals(2)
 	list.get(3).assertEquals(34)
+

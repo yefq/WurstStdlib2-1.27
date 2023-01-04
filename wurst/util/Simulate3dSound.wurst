@@ -194,3 +194,4 @@ public function bindSoundToPointForPlayer(player p, sound s, real x, real y, rea
 			StartSound(s)
 
 	return new Sim3DSound(s, x, y, minD, maxD, distCut)
+

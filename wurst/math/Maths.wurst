@@ -87,3 +87,4 @@ public function min(vararg real numbers) returns real
 
 function test_hypot_help(real x, real y)
 	hypot(x,y).assertEquals(SquareRoot(x * x + y * y), 0.0001)
+

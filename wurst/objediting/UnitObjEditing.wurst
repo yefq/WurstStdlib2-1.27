@@ -620,6 +620,7 @@ public class UnitOrHeroDefinition extends UnitOrBuildingOrHeroDefinition
 	function setFormationRank(int data)
 		def.setInt("ufor", data)
 
+
 public class HeroDefinition extends UnitOrHeroDefinition
 
 	construct(int newId, int origId)

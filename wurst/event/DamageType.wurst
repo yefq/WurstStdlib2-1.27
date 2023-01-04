@@ -2,7 +2,6 @@
 package DamageType
 
 import public DamageEvent
-import Annotations
 
 @deprecated("Use DamageEvent.getType() instead.")
 public function getDamageType() returns DamageType

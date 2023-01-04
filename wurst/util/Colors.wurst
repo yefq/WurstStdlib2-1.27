@@ -329,3 +329,4 @@ init
 	assertTrue(toPlayerFromColorName("BROWN") == Player(11))
 	assertTrue(toPlayerFromColorName("wurstlang") == null)
 
+

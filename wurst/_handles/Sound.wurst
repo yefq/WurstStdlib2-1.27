@@ -42,3 +42,4 @@ public function sound.getDuration() returns int
 
 public function sound.isPlaying() returns boolean
 	return GetSoundIsPlaying(this)
+

@@ -6,7 +6,6 @@ import ByteBuffer
 import ChunkedString
 import Execute
 import ErrorHandling
-import Annotations
 
 /*  Base64 package provides encoding and decoding functions for the common base64 format
     that allows serializing and deserializing of any data by writing integers into the Encoder

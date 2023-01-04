@@ -33,3 +33,4 @@ public class HashSet<T> extends HashList<T>
 
 	ondestroy
 		position.flushChild(this castTo int)
+

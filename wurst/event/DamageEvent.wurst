@@ -26,7 +26,8 @@
 
         DamageEvent.addUnreducedListener() ->
             print("this fire before any damage reduction")
-                
+
+
     Each damage instance has a DamageType associated to it.
     CODE **must** be declared by the user using DamageEvent.setNextDamageFromCode() before dealing damage.
     ATTACK and SPELL are detected by the system (if DETECT_NATIVE_ABILITIES is false then native abilities will be detected as ATTACK)

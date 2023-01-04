@@ -3,8 +3,10 @@ import NoWurst
 import public Unit
 import public Timer
 import Basics
+import ErrorHandling
 import MapBounds
 import AbilityObjEditing
+import ObjectIds
 import Colors
 import Annotations
 import UnitIds
@@ -13,8 +15,6 @@ import ObjectIdGenerator
 import LinkedList
 import TypeCasting
 import ClosureTimers
-import MagicFunctions
-import ObjectIds
 
 /** Id of the dummy unit */
 public constant DUMMY_UNIT_ID = compiletime(UNIT_ID_GEN.next())
@@ -134,4 +134,5 @@ init
 	..setAttack1WeaponType(WeaponType.Instant)
 	..setAcquisitionRange(INT_MAX.toReal())
 	..setNormalAbilities(
-		commaList(AbilityIds.invulnerable, LOCUST_ID, DISABLE_AUTO_ACQUIRE_ATTACK_TARGETS_ABILITY_ID))
+		commaList(AbilityIds.invulnerable, AbilityIds.locust, DISABLE_AUTO_ACQUIRE_ATTACK_TARGETS_ABILITY_ID))
+

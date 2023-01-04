@@ -1,6 +1,5 @@
 package DamageDetection
 import OnUnitEnterLeave
-import Annotations
 
 /**
 	Use `addOnDamageFunc` to add a listener to any damage event that happens on the map.

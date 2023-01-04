@@ -38,3 +38,4 @@ public function timerdialog.isDisplayed() returns boolean
 
 public function timerdialog.setRealTimeRemaining(real timeRemaining)
 	TimerDialogSetRealTimeRemaining(this, timeRemaining)
+

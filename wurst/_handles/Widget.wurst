@@ -1,7 +1,6 @@
 package Widget
 import NoWurst
 import public Vectors
-import Effect
 
 public function widget.getLife() returns real
 	return GetWidgetLife(this)
@@ -20,9 +19,6 @@ public function widget.getY() returns real
 
 public function widget.addEffect(string modelName, string attachment) returns effect
 	return AddSpecialEffectTarget(modelName, this, attachment)
-
-public function widget.flashEffect(string modelName, string attachment)
-	AddSpecialEffectTarget(modelName, this, attachment).destr()
 
 /** Checks if the widget is alive by testing current life > .405 */
 public function widget.isAliveTrick() returns bool

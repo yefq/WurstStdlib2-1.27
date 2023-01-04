@@ -11,12 +11,7 @@ public function flashEffect(string path, vec3 pos)
 
 public function flashEffect(string path, vec2 pos)
 	addEffect(path, pos).destr()
-	
-public function addEffect(string path, vec2 pos) returns effect
-	return AddSpecialEffect(path, pos.x, pos.y)
-	
-public function addEffect(string path, vec3 pos) returns effect
-	return AddSpecialEffect(path, pos.x, pos.y)
+
 
 public function flashEffect(string path, widget target, string attachPointName)
 	addEffect(path, target, attachPointName).destr()
@@ -35,6 +30,12 @@ public function flashEffect(int abilityId, effecttype effType, vec2 pos)
 	Works for custom abilities. */
 public function flashEffect(int abilityId, effecttype effType, widget target, string attachPointName)
 	addEffect(abilityId, effType, target, attachPointName).destr()
+
+public function addEffect(string path, vec2 pos) returns effect
+	return AddSpecialEffect(path, pos.x, pos.y)
+
+public function addEffect(string path, vec3 pos) returns effect
+	return AddSpecialEffect(path, pos.x, pos.y)
 
 public function addEffect(string path, widget target, string attachPointName) returns effect
 	return AddSpecialEffectTarget(path, target, attachPointName)

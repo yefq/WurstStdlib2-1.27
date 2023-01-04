@@ -1,7 +1,5 @@
 package BitwiseInit
 
-import Annotations
-
 public int array lbyte
 public int array rbyte
 

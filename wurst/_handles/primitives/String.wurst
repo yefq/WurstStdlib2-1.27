@@ -1,6 +1,9 @@
 package String
 import NoWurst
 import Integer
+import Annotations
+
+@configurable public constant ENABLE_MULTIBYTE_SUPPORT = false
 
 constant charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 constant numberset = "0123456789"
@@ -234,8 +237,12 @@ public class StringIterator
 		return currentpos < stringLen
 
 	function next() returns string
-		let val = s.substring(currentpos, currentpos + 1)
-		currentpos++
+		var val = s.substring(currentpos, currentpos + 1)
+		if ENABLE_MULTIBYTE_SUPPORT and val.getHash() == 1843378377
+			val = s.substring(currentpos, currentpos + 2)
+			currentpos += 2
+		else
+			currentpos++
 		return val
 
 	function close()
@@ -271,3 +278,5 @@ public class StringLines
 /** Returns a StringLines Object of the given string for iteration */
 public function string.toLines() returns StringLines
 	return new StringLines(this, 0, this.countOccurences("\n") + 1)
+
+

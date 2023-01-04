@@ -15,6 +15,7 @@ public interface RealLevelClosure
 public interface BooleanLevelClosure
 	function run(int lvl) returns boolean
 
+
 public tuple ObjectDefinition(string key)
 
 // creates a new unit objectdefinition

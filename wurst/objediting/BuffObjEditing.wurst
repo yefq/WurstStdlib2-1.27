@@ -2,7 +2,6 @@ package BuffObjEditing
 import AbilityObjEditing
 import ObjectIds
 import ObjectIdGenerator
-import Annotations
 
 /**  You should use 'createBuffObject' inside compiletime expressions:
 	let someBuff = compiletime(createBuffObject("Yes", "cool", Icons.bTNFarm))

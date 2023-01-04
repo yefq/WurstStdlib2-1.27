@@ -17,7 +17,7 @@ public function registerPlayerUnitEvent(playerunitevent p, code filter, code con
 	let hid = p.getHandleId()
 	if t[hid] == null
 		t[hid] = CreateTrigger()
-		for k = bj_MAX_PLAYER_SLOTS-1 downto 0
+		for k = bj_MAX_PLAYER_SLOTS - 1 downto 0
 			t[hid].registerPlayerUnitEvent(players[k], p, filter != null ? Filter(filter) : null)
 	if condition != null
 		t[hid].addCondition(Filter(condition))
@@ -25,7 +25,7 @@ public function registerPlayerUnitEvent(playerunitevent p, code filter, code con
 		t[hid].addAction(action)
 
 public function registerPlayerUnitEventForPlayer(playerunitevent p, code c, player pl)
-	let i = 16 * p.getHandleId() + pl.getId()
+	let i = bj_MAX_PLAYER_SLOTS * p.getHandleId() + pl.getId()
 	if t[i] == null
 		t[i] = CreateTrigger()
 		t[i].registerPlayerUnitEvent(pl, p, null)
@@ -43,7 +43,7 @@ public function registerPlayerEvent(playerevent p, code condition, code action)
 	let hid = p.getHandleId()
 	if t[hid] == null
 		t[hid] = CreateTrigger()
-		for k = bj_MAX_PLAYER_SLOTS-1 downto 0
+		for k = bj_MAX_PLAYER_SLOTS - 1 downto 0
 			t[hid].registerPlayerEvent(players[k], p)
 	if condition != null
 		t[hid].addCondition(Filter(condition))
@@ -52,11 +52,11 @@ public function registerPlayerEvent(playerevent p, code condition, code action)
 
 /*****SpellEffectEvent*****/
 
-HashMap<int, trigger> onCastMap = new HashMap<int, trigger>()
- 
+constant onCastMap = new HashMap<int, trigger>()
+
 init
 	registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT, () -> (onCastMap.get(GetSpellAbilityId())).evaluate())
- 
+
 public function registerSpellEffectEvent(int abil, code onCast)
 	if not onCastMap.has(abil)
 		onCastMap.put(abil, CreateTrigger())

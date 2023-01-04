@@ -31,7 +31,6 @@ import MapBounds
 import LinkedListModule
 import HashMap
 import Objects
-import Annotations
 
 /** A vec3 -> real function. */
 public interface TerrainZProvider

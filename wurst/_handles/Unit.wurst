@@ -4,10 +4,11 @@ import public Vectors
 import Item
 import Annotations
 import Destructable
+import AbilityIds
 
-public native UnitAlive(unit id) returns boolean
-public native GetUnitGoldCost(int unitid) returns int
-public native GetUnitWoodCost(int unitid) returns int
+@IfNotDefined public native UnitAlive(unit id) returns boolean
+@IfNotDefined public native GetUnitGoldCost(int unitid) returns int
+@IfNotDefined public native GetUnitWoodCost(int unitid) returns int
 
 public function unit.getGoldCost() returns int
 	return GetUnitGoldCost(this.getTypeId())

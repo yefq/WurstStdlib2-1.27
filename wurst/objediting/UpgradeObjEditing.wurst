@@ -526,3 +526,4 @@ public class UpgradeDefinition extends W3QDefinition
 		super.setEffectType(effectIndex, UpgradeEffectType.UnitAvailabilityChange)
 		super.setEffectCode(effectIndex, unitId)
 		super.setEffectBase(effectIndex, available ? -1 : 1)
+
