@@ -1,7 +1,5 @@
 package ClosureForGroups
 
-import Annotations
-
 public interface ForGroupCallback
 	function callback(unit u)
 

@@ -4,7 +4,6 @@ import public Vectors
 import Item
 import Annotations
 import Destructable
-import AbilityIds
 
 @IfNotDefined public native UnitAlive(unit id) returns boolean
 @IfNotDefined public native GetUnitGoldCost(int unitid) returns int

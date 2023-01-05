@@ -56,7 +56,7 @@ public function playercolor.getPlayers() returns force
 	let matchingPlayers = CreateForce()
 	for i = 0 to bj_MAX_PLAYER_SLOTS - 1
 		if players[i].getColor() == this
-			matchingPlayers.add(players[i])
+			matchingPlayers.addPlayer(players[i])
 	return matchingPlayers
 
 
@@ -79,13 +79,13 @@ public function playercolor.getPlayers() returns force
 	(players[0].getColor() == PLAYER_COLOR_RED).assertTrue()
 	// Test getting forces of players.
 	let force1 = PLAYER_COLOR_RED.getPlayers()
-	force1.has(Player(0)).assertTrue()
+	force1.containsPlayer(Player(0)).assertTrue()
 	players[1].setColor(PLAYER_COLOR_BLUE)
 	players[2].setColor(PLAYER_COLOR_BLUE)
 	let force2 = PLAYER_COLOR_BLUE.getPlayers()
-	force2.has(Player(1)).assertTrue()
-	force2.has(Player(2)).assertTrue()
-	force2.has(Player(3)).assertFalse()
+	force2.containsPlayer(Player(1)).assertTrue()
+	force2.containsPlayer(Player(2)).assertTrue()
+	force2.containsPlayer(Player(3)).assertFalse()
 
 	let p = players[5]
 	assertTrue(p.getColor() == null)

@@ -1,7 +1,6 @@
 package Effect
 import NoWurst
 import Vectors
-import ClosureTimers
 
 public function effect.destr()
 	DestroyEffect(this)
@@ -54,6 +53,3 @@ public function addEffect(int abilityId, effecttype effType, vec3 pos) returns e
 	Works for custom abilities. */
 public function addEffect(int abilityId, effecttype effType, widget target, string attachPointName) returns effect
 	return AddSpellEffectTargetById(abilityId, effType, target, attachPointName)
-
-public function effect.destroyAfter(real delay)
-	doAfter(delay, () -> this.destr())

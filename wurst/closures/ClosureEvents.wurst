@@ -5,7 +5,6 @@ import ClosureTimers
 import UnitIndexer
 import HashMap
 import ErrorHandling
-import Annotations
 
 /** Use this chat event if you want to access the entered message */
 public constant EVENT_PLAYER_CHAT_FILTER = ConvertPlayerEvent(96)
